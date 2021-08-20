@@ -137,6 +137,15 @@ class App extends Component {
     this.setState({
       carrosLista: this.state.carrosLista.concat(carros)
     });
+    // if(this.state.item === id){
+    //   this.setState({
+    //     estado: "false"
+    //   })
+    // } else {
+    //   this.setState({
+    //     estado: "true"
+    //   })
+    // }
   };
 
   remove = (event, id) => {
@@ -158,7 +167,7 @@ class App extends Component {
               <BoxCarros key={index}>
                 <TitleCarros>
                   <p>{item.nome}</p>
-                  <ButtonCarros onClick={() => this.add(item)}>+</ButtonCarros>
+                  <ButtonCarros /*disabled={this.state.estado}*/ onClick={() => this.add(item)}>+</ButtonCarros>
                 </TitleCarros>
                 <Ul>
                   <ListCarros>Montadora: {item.montadora}</ListCarros>
